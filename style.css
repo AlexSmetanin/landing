@@ -1,0 +1,220 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 40px;
+  font-weight: 800;
+  font-style: Italic;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms;
+  padding: 64px 120px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #e8eff9;
+}
+
+.menu:target {
+  transform: translateX(0%);
+}
+
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #292929;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px 120px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url(../images/header.png);
+  background-size: cover;
+  background-position: top center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-button {
+  height: 24px;
+  width: 24px;
+  display: block;
+  background-image: url(../images/icon-burger-menu.png);
+}
+
+.menu-button-close {
+  height: 24px;
+  width: 24px;
+  display: block;
+  background-image: url(../images/icon-close.png);
+}
+
+.menu-button:hover {
+  background-image: url(../images/icon-burger-menu-hover.png);
+}
+
+main {
+  padding: 120px;
+  background-color: #fff;
+}
+
+.recommended-title {
+  margin-bottom: 64px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-photo {
+  width: 100%;
+}
+
+.product-title {
+  margin: 0;
+  margin-top: 32px;
+  font-weight: 700;
+}
+
+.product-description {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.product-price {
+  margin: 0;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.category {
+  margin-top: 64px;
+}
+
+.categories-title {
+  margin-top: 120px;
+  margin-bottom: 64px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.photos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-wide {
+  width: 66%;
+}
+
+.photo-square {
+  width: 32%;
+}
+
+.category-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 120px;
+}
+
+.benefits-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.5px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+}
+
+.benefits-desription {
+  margin: 0;
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  height: 460px;
+  background-image: url(../images/footer.png);
+  background-size: cover;
+  background-position: top center;
+}
