@@ -219,3 +219,163 @@ footer {
   background-size: cover;
   background-position: top center;
 }
+
+.scroll-wrapper {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;        /* було центровано — тепер чітко справа */
+  left: auto;
+  transform: none;
+
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.scroll-to-top {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+
+  pointer-events: auto;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-to-top:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  transform: translateY(0) scale(1.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* позиція */
+.scroll-wrapper {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* glass-button */
+.scroll-to-top {
+  position: relative;
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+
+  color: #111;
+
+  opacity: 0;
+  transform: translateY(12px) scale(0.92);
+
+  transition: all .35s ease;
+  pointer-events: auto;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.28);
+  box-shadow:
+    0 14px 45px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.45);
+}
+
+/* стрілка */
+.scroll-to-top .arrow {
+  position: absolute;
+  z-index: 2;
+}
+
+/* progress ring */
+.progress-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+  fill: none;
+  stroke-width: 2;
+}
+
+.progress-ring__bg {
+  stroke: rgba(0,0,0,0.08);
+}
+
+.progress-ring__progress {
+  stroke: #111;
+  stroke-dasharray: 138;
+  stroke-dashoffset: 138;
+  transition: stroke-dashoffset .2s linear;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .scroll-wrapper {
+    right: 16px;
+    bottom: 20px;
+  }
+
+  .scroll-to-top {
+    width: 46px;
+    height: 46px;
+  }
+}
+
